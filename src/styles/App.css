@@ -24,6 +24,9 @@
     }    
 }
 
+.App {
+    padding-top: 20px;
+}
 
 .post {
     display: flex;
@@ -41,7 +44,6 @@
 
 .AddForm {
     width: 600px;
-    margin: 0 auto;
 }
 
 .BlockPost {
