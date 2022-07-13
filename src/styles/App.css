@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (min-width: 620px) {
+    .App {
+        width: 600px;
+        transition: 0.5s;
+    }    
+}
+
+@media (min-width: 820px) {
+    .App {
+        width: 800px;
+        transition: 0.5s;
+    }    
+}
+
+
+.post {
+    display: flex;
+    margin-top: 10px;
+    padding: 15px;
+    border: 2px solid aqua;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.PostList {
+    padding-top: 50px;
+}
+
+.AddForm {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.BlockPost {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
