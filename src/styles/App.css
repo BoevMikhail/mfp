@@ -51,3 +51,53 @@
     flex-direction: column;
     padding: 30px;
 }
+
+.post-enter {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+
+.post-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 500ms ease-in;
+  }
+
+.post-exit {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+.post-exit-active {
+    opacity: 0;
+    transform: translateX(-500px);
+    transition: all 500ms ease-in;
+  }
+
+  .page__wrapper {
+    margin-top: 30px;
+    display: flex;
+  }
+
+  .page {
+    margin-right: 5px;
+    padding: 10px;
+    border: 1px solid teal;
+    cursor: pointer;
+  }
+
+  .page:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: 0.1s;
+  }
+
+  .page__current {
+    border: 2px solid orangered;
+    font-weight: 700;
+    background: none;
+    cursor:default;
+  }
+
+  .page__current:hover {
+    background: none;
+}
