@@ -6,7 +6,9 @@
 
 #root {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 
@@ -100,4 +102,33 @@
 
   .page__current:hover {
     background: none;
+}
+
+.navbar {
+  display: flex;
+  height: 50px;
+  width: 100vw;
+  width: 100%;
+  padding: 10px;
+  background-color: gray;
+}
+
+.navbar__links {
+  display: flex;
+  justify-content: end;
+  width: 800px;
+  margin: 0 auto;
+}
+
+.navbar__item {
+  margin-left: 10px;
+  text-decoration: underline;
+  color: black;
+  font-size: 20px;
+}
+
+.navbar__item:hover {
+  color: white;
+  font-size: 24px;
+  transition: 0.2s;
 }
