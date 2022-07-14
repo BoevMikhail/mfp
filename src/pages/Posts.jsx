@@ -16,7 +16,7 @@ function Posts() {
   const [filter, setFilter] = useState({ sort: '', query: '' });
   const [modal, setModal] = useState(false);
   const [totalPages, setTotalPages] = useState(0);
-  const [limit, setLimit] = useState(10);
+  const [limit] = useState(10);
   const [page, setPage] = useState(1);
   const sortedAndSearchedPosts = usePosts(posts, filter.sort, filter.query);
 
@@ -57,11 +57,13 @@ function Posts() {
       {postError &&
         <h1>Произошла ошибка ${postError}</h1>
       }
-      {isPostsLoading
-        ? <div style={{ display: 'flex', justifyContent: "center", marginTop: '50' }}>
+
+			<PostList remove={removePost} posts={sortedAndSearchedPosts} title='Список постов' />
+      {isPostsLoading &&
+        <div style={{ display: 'flex', justifyContent: "center", marginTop: '50' }}>
           <Loader />
         </div>
-        : <PostList remove={removePost} posts={sortedAndSearchedPosts} title='Список постов' />}
+      }
 
 
       <MyModal visible={modal} setVisivle={setModal}>
