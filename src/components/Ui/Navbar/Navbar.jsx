@@ -8,7 +8,7 @@ const Navbar = () => {
     <div className="navbar">
     <div className="navbar__links">
 			{isAuth &&
-				<button style={{display: 'block', marginRight: 'auto'}} onClick={() => setIsAuth(false)}>Выйти</button>
+				<button style={{display: 'block', marginRight: 'auto'}} onClick={() => {setIsAuth(false); localStorage.removeItem('isAuth')}}>Выйти</button>
 			}
       <Link className="navbar__item" to="/about">О сайте</Link>
       <Link className="navbar__item" to="/posts">Посты</Link>
